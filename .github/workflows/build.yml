@@ -25,7 +25,7 @@ jobs:
     needs: cancel-previous-runs
     strategy:
       matrix:
-        version: [ '7.2' ]
+        version: [ '7.2', '7.3' ]
 
     env:
       VERSION: "${{ matrix.version }}"
