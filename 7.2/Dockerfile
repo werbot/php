@@ -1,9 +1,9 @@
 FROM php:7.2-fpm-alpine
 
-RUN apk add --no-cache msmtp perl wget procps shadow libzip libpng libjpeg-turbo libwebp freetype icu supervisor
+RUN apk add --no-cache msmtp perl wget procps shadow libzip libpng libjpeg-turbo libwebp freetype icu supervisor geoip libmemcached ldb libldap libpq
 RUN apk add --no-cache --virtual build-essentials \
     icu-dev icu-libs zlib-dev g++ make automake autoconf libzip-dev \
-    postgresql-dev ldb-dev libldap openldap-dev geoip-dev libsodium-dev gmp-dev libmemcached-dev \
+    postgresql-dev ldb-dev openldap-dev geoip-dev libsodium-dev gmp-dev libmemcached-dev \
     libpng-dev libwebp-dev libjpeg-turbo-dev freetype-dev && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-webp-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-install gd && \
