@@ -1,4 +1,4 @@
-FROM werbot/php:7.2
+FROM werbot/php:7.3
 
 # Install XDebug.
 RUN apk add --no-cache --virtual build-essentials \
