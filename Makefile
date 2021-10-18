@@ -28,5 +28,5 @@ test:
 
 push:
 	docker tag $(IMAGE):$(VERSION) ghcr.io/$(IMAGE):$(VERSION)
-	docker push ghcr.io:$(IMAGE):$(VERSION)
+	docker push ghcr.io/$(IMAGE):$(VERSION)
 
