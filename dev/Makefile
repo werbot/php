@@ -27,4 +27,5 @@ test:
 	@echo 'OK'
 
 push:
+	docker tag $(IMAGE):$(VERSION)-dev ghcr.io/$(IMAGE):$(VERSION)-dev
 	docker push ghcr.io/$(IMAGE):$(VERSION)-dev
