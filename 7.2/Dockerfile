@@ -14,6 +14,7 @@ RUN apk add --no-cache --virtual build-essentials \
     docker-php-ext-install exif && \
     docker-php-ext-install ldap && \
     docker-php-ext-install gmp && \
+    docker-php-ext-install bcmath && \
     pecl install memcached redis && \
     pecl install geoip-1.1.1 && \
     pecl install libsodium && \
