@@ -6,6 +6,7 @@ RUN apk add --no-cache --virtual build-essentials \
     postgresql-dev ldb-dev openldap-dev geoip-dev libsodium-dev gmp-dev libmemcached-dev \
     libpng-dev libwebp-dev libjpeg-turbo-dev freetype-dev && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-webp-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+    docker-php-ext-install zip && \
     docker-php-ext-install gd && \
     docker-php-ext-install pgsql && \
     docker-php-ext-install pdo_pgsql && \
