@@ -7,4 +7,4 @@ werbot/php
 - For Develop version: **ghcr.io/werbot/php:**_version_**-dev**
 
 ## PHP-fpm versions:
-**7.2**
+**7.2**, **7.3**

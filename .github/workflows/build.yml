@@ -8,7 +8,6 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  
   cancel-previous-runs:
     name: Cancel previous runs
     runs-on: ubuntu-20.04
