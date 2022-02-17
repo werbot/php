@@ -9,10 +9,10 @@ RUN apk add --no-cache --virtual build-essentials \
     docker-php-ext-install zip calendar iconv mbstring soap gd pgsql pdo_pgsql intl opcache exif ldap gmp bcmath && \
     pecl install memcached redis geoip-1.1.1 libsodium && \
     docker-php-ext-enable memcached.so redis.so geoip.so && \
-    apk del build-essentials && rm -rf /usr/src/php*
+    apk del build-essentials && rm -rf /usr/src/php* && rm -rf /var/cache/apk/*
 
 RUN wget https://getcomposer.org/composer-stable.phar -O /usr/local/bin/composer && chmod +x /usr/local/bin/composer
-ADD supervisord.conf /etc/supervisord.conf
+COPY supervisord.conf /etc/supervisord.conf
 
 STOPSIGNAL SIGQUIT
 EXPOSE 9000
